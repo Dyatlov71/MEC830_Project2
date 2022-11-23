@@ -11,16 +11,16 @@
 #define IN3 7
 #define IN4 6
 
-#define carSpeed 80
+#define carSpeed 90
 //int rightDistance = 0, leftDistance = 0, middleDistance = 0;
 
 void forward() {
   analogWrite(ENA, carSpeed);
   analogWrite(ENB, carSpeed);
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
-  digitalWrite(IN3, HIGH);
-  digitalWrite(IN4, LOW);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
   Serial.println("go forward!");
 }
 
@@ -38,10 +38,10 @@ void left() {
   
   analogWrite(ENA, carSpeed);
   analogWrite(ENB, carSpeed);
-  digitalWrite(IN1, HIGH);
+  digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
-  digitalWrite(IN4, LOW);
+  digitalWrite(IN4, HIGH);
   Serial.println("go left!");
 }
 
@@ -50,8 +50,8 @@ void right() {
   analogWrite(ENA, carSpeed);
   analogWrite(ENB, carSpeed);
   digitalWrite(IN1, LOW);
-  digitalWrite(IN2, LOW);
-  digitalWrite(IN3, HIGH);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
   Serial.println("go right!");
 }

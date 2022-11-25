@@ -11,7 +11,8 @@
 #define IN3 7
 #define IN4 6
 
-#define carSpeed 100
+
+#define carSpeed 110
 //int rightDistance = 0, leftDistance = 0, middleDistance = 0;
 
 void forward() {
@@ -97,12 +98,13 @@ void loop() {
      while (LT_R);
   }
   else{
-    analogWrite(ENA, 50);
-  analogWrite(ENB, 50);
-  digitalWrite(IN1, LOW);
-  digitalWrite(IN2, HIGH);
-  digitalWrite(IN3, LOW);
-  digitalWrite(IN4, LOW);
+      analogWrite(ENA, 50);
+    analogWrite(ENB, 50);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    digitalWrite(IN3, LOW);
+    digitalWrite(IN4, LOW);
+//stop();
   }
 
 //Serial.print(LT_R);
